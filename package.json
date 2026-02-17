@@ -9,5 +9,8 @@
     "type": "git",
     "url": "git+https://github.com/ncaq/renovate-config.git"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "renovate": "^42.99.0"
+  }
 }
