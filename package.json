@@ -1,0 +1,13 @@
+{
+  "name": "renovate-config",
+  "description": "renovate global config",
+  "homepage": "https://github.com/ncaq/renovate-config#readme",
+  "bugs": {
+    "url": "https://github.com/ncaq/renovate-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncaq/renovate-config.git"
+  },
+  "license": "Apache-2.0"
+}
