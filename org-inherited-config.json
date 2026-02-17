@@ -8,7 +8,7 @@
   },
   "packageRules": [
     {
-      "description": "開発用依存関係のコミットスコープをdeps-devにします",
+      "description": ["開発用依存関係のコミットスコープをdeps-devにします"],
       "semanticCommitScope": "deps-dev",
       "matchDepTypes": [
         "build",
