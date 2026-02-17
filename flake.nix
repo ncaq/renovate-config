@@ -65,6 +65,22 @@
                 );
                 includes = [ "*" ];
               };
+
+              renovate-config-validator = {
+                command = pkgs.lib.getExe (
+                  pkgs.writeShellApplication {
+                    name = "renovate-config-validator-wrapper";
+                    runtimeInputs = [ pkgs.renovate ];
+                    text = ''
+                      renovate-config-validator --strict "$@"
+                    '';
+                  }
+                );
+                includes = [
+                  "org-inherited-config.json"
+                  "renovate.json"
+                ];
+              };
             };
           };
           devShells.default = pkgs.mkShell {
