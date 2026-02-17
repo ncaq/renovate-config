@@ -1,4 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "labels": ["Type: Dependencies"]
+  "labels": ["Type: Dependencies"],
+  "packageRules": [
+    {
+      "enabled": false,
+      "matchPackageNames": ["@types/node"],
+      "matchUpdateTypes": ["major"]
+    }
+  ]
 }
