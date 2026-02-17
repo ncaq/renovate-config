@@ -2,6 +2,10 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "labels": ["Type: Dependencies"],
   "semanticCommitType": "build",
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "addLabels": ["Type: Security"]
+  },
   "packageRules": [
     {
       "description": "開発用依存関係のコミットスコープをdeps-devにします",
