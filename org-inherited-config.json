@@ -3,6 +3,24 @@
   "labels": ["Type: Dependencies"],
   "packageRules": [
     {
+      "description": "開発用依存関係のコミットスコープをdeps-devにします",
+      "semanticCommitScope": "deps-dev",
+      "matchDepTypes": [
+        "build",
+        "build-dependencies",
+        "dev",
+        "dev-dependencies",
+        "dev-packages",
+        "devDependencies",
+        "dev_dependencies",
+        "development",
+        "plugin",
+        "require-dev",
+        "test",
+        "tool"
+      ]
+    },
+    {
       "enabled": false,
       "matchPackageNames": ["@types/node"],
       "matchUpdateTypes": ["major"]
