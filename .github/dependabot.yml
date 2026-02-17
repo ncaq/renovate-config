@@ -1,0 +1,28 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    open-pull-requests-limit: 20
+    labels:
+      - "Type: CI"
+      - "Type: Dependencies"
+    schedule:
+      interval: daily
+  - package-ecosystem: "npm"
+    directory: "/"
+    open-pull-requests-limit: 20
+    labels:
+      - "Type: Dependencies"
+    schedule:
+      interval: monthly
+    groups:
+      types:
+        patterns:
+          - "@types/*"
+      eslint:
+        patterns:
+          - "*eslint*"
+    ignore:
+      - dependency-name: "@types/node" # Node.jsのバージョンはこちらでLTSを前提にコントロールしたいため。
+        update-types:
+          - "version-update:semver-major"
