@@ -8,6 +8,39 @@
   },
   "packageRules": [
     {
+      "description": ["Dependabotが管理するエコシステムを無効化して重複PRを防止します"],
+      "enabled": false,
+      "matchManagers": [
+        "bazel",
+        "bazel-module",
+        "bun",
+        "bundler",
+        "cargo",
+        "composer",
+        "devcontainer",
+        "docker-compose",
+        "dockerfile",
+        "git-submodules",
+        "github-actions",
+        "gomod",
+        "gradle",
+        "gradle-wrapper",
+        "helmv3",
+        "maven",
+        "maven-wrapper",
+        "mix",
+        "npm",
+        "nuget",
+        "pep621",
+        "pip-compile",
+        "pip_requirements",
+        "pip_setup",
+        "pub",
+        "swift",
+        "terraform"
+      ]
+    },
+    {
       "description": ["開発用依存関係のコミットスコープをdeps-devにします"],
       "semanticCommitScope": "deps-dev",
       "matchDepTypes": [
