@@ -16,6 +16,20 @@ ASCIIに対応する全角形(Fullwidth Forms)は使用禁止。
 - 全角カンマ `，` → 半角 `,`
 - 全角数字 `０-９` → 半角 `0-9`
 
+# 重要コマンド
+
+全てのフォーマットは以下のコマンドで実行可能です。
+
+```console
+nix fmt
+```
+
+フォーマットチェックを含めた全てのチェックは以下のコマンドで実行可能です。
+
+```console
+nix flake check
+```
+
 # リポジトリ構成
 
 `CLAUDE.md`は以下のように`.github/copilot-instructions.md`のシンボリックリンクになっています。

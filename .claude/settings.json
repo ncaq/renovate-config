@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": ["Bash(nix flake check *)", "Bash(nix fmt *)", "Skill(nix-check)"],
+    "deny": ["Bash(npx *)", "Bash(pnpm *)", "Bash(yarn *)"]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Stop",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd $CLAUDE_PROJECT_DIR && nix fmt"
+          }
+        ]
+      }
+    ]
+  }
+}
