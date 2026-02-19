@@ -29,9 +29,6 @@
           pkgs,
           ...
         }:
-        let
-          inherit (pkgs) importNpmLock;
-        in
         {
           treefmt.config = {
             projectRootFile = "flake.nix";
@@ -85,13 +82,8 @@
           };
           devShells.default = pkgs.mkShell {
             packages = with pkgs; [
-              importNpmLock.hooks.linkNodeModulesHook
-              nodejs
+              renovate
             ];
-            npmDeps = importNpmLock.buildNodeModules {
-              inherit (pkgs) nodejs;
-              npmRoot = ./.;
-            };
           };
         };
     });
