@@ -59,6 +59,7 @@
       ]
     },
     {
+      "description": ["Node.jsのバージョンは破壊的変更を避けたいので更新を無効化します"],
       "enabled": false,
       "matchPackageNames": ["@types/node"],
       "matchUpdateTypes": ["major"]
