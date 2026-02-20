@@ -9,6 +9,13 @@
     "enabled": true,
     "addLabels": ["Type: Security"]
   },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 10am on monday"]
+  },
+  "nix": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "description": ["Dependabotが管理するエコシステムを無効化して重複PRを防止します"],
@@ -60,6 +67,11 @@
         "test",
         "tool"
       ]
+    },
+    {
+      "description": ["Nix Flakeの入力更新を週1回に制限します"],
+      "matchManagers": ["nix"],
+      "schedule": ["before 10am on monday"]
     },
     {
       "description": ["Node.jsのバージョンは破壊的変更を避けたいので更新を無効化します"],
