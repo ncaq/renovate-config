@@ -19,7 +19,9 @@
   },
   "packageRules": [
     {
-      "description": ["Dependabotが管理するエコシステムを無効化して重複PRを防止します"],
+      "description": [
+        "Dependabotが管理するエコシステムを無効化して重複PRを防止します"
+      ],
       "enabled": false,
       "matchManagers": [
         "bazel",
@@ -75,7 +77,9 @@
       "schedule": ["before 10am on monday"]
     },
     {
-      "description": ["Node.jsのバージョンは破壊的変更を避けたいので更新を無効化します"],
+      "description": [
+        "Node.jsのバージョンは破壊的変更を避けたいので更新を無効化します"
+      ],
       "enabled": false,
       "matchPackageNames": ["@types/node"],
       "matchUpdateTypes": ["major"]
