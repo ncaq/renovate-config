@@ -1,6 +1,0 @@
-{
-  "Disable": {
-    "IndentSize": true
-  },
-  "Exclude": ["\\.gpg$"]
-}

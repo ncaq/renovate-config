@@ -7,5 +7,5 @@ result-*
 # Ignore automatically generated direnv output
 .direnv
 
-# User Custom
+# Ignore local override env
 .env.local

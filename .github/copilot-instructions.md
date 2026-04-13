@@ -2,8 +2,10 @@
 
 ## 言語
 
-AIは人間にテキストを出力するときは日本語で出力してください。
-しかしコードのコメントなどが日本語ではない場合は元の言語のままにしてください。
+AIは人間に話すときは日本語を使ってください。
+
+しかし既存のコードのコメントなどが日本語ではない場合は、
+コメント等は既存の言語に合わせてください。
 
 ## 記号
 
@@ -18,22 +20,33 @@ ASCIIに対応する全角形(Fullwidth Forms)は使用禁止。
 
 # 重要コマンド
 
-全てのフォーマットは以下のコマンドで実行可能です。
+## フォーマット
+
+nix fmtでフォーマットとリントを実行できます。
 
 ```console
 nix fmt
 ```
 
-フォーマットチェックを含めた全てのチェックは以下のコマンドで実行可能です。
+[nix-tasuke](https://github.com/ncaq/konoka/tree/master/plugins/nix-tasuke)プラグインにより、
+Claudeの応答完了時にStopフックで`nix fmt`が自動実行されます。
+ファイルの差分が出ることがあります。
+
+## 統合チェック
+
+nix-fast-buildコマンドで統合チェックを実行できます。
 
 ```console
-nix flake check
+nix-fast-build --option eval-cache false --no-link --skip-cached --no-nom
 ```
 
 # リポジトリ構成
 
-`CLAUDE.md`は以下のように`.github/copilot-instructions.md`のシンボリックリンクになっています。
+Codex向けの`AGENTS.md`とClaude Code向けの`CLAUDE.md`は以下のように`.github/copilot-instructions.md`のシンボリックリンクになっています。
 
 ```console
+AGENTS.md -> .github/copilot-instructions.md
 CLAUDE.md -> .github/copilot-instructions.md
 ```
+
+これにより各種LLM向けのドキュメントを一元管理しています。
