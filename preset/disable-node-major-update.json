@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": [
+        "Node.jsのメジャーバージョンは破壊的変更を考えて手動で検討したいため、関連パッケージのメジャーアップデートを無効化"
+      ],
+      "enabled": false,
+      "matchPackageNames": ["@types/node"],
+      "matchUpdateTypes": ["major"]
+    }
+  ]
+}

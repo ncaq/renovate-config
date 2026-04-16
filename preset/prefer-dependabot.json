@@ -1,0 +1,38 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": [
+        "Dependabotとの重複を避けるため、対象managerではRenovateの更新を無効化します"
+      ],
+      "enabled": false,
+      "matchManagers": [
+        "bazel",
+        "bazel-module",
+        "bun",
+        "bundler",
+        "cargo",
+        "composer",
+        "devcontainer",
+        "docker-compose",
+        "dockerfile",
+        "git-submodules",
+        "github-actions",
+        "gomod",
+        "gradle",
+        "helmv3",
+        "maven",
+        "mix",
+        "npm",
+        "nuget",
+        "pep621",
+        "pip-compile",
+        "pip_requirements",
+        "pip_setup",
+        "pub",
+        "swift",
+        "terraform"
+      ]
+    }
+  ]
+}
