@@ -5,6 +5,7 @@
     "github>ncaq/renovate-config//preset/base",
     "github>ncaq/renovate-config//preset/deps-dev-dependency-commit-scope",
     "github>ncaq/renovate-config//preset/disable-node-major-update",
+    "github>ncaq/renovate-config//preset/lock-file-maintenance",
     "github>ncaq/renovate-config//preset/prefer-dependabot",
     "github>ncaq/renovate-config//preset/schedule-nix-flake-input-weekly"
   ]

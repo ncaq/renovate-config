@@ -9,10 +9,6 @@
     "enabled": true,
     "addLabels": ["Type: Security"]
   },
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": ["before 10am on monday"]
-  },
   "nix": {
     "enabled": true
   }
