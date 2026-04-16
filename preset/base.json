@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "ignorePresets": [":semanticPrefixFixDepsChoreOthers"],
+  "timezone": "Asia/Tokyo",
+  "branchConcurrentLimit": 20,
+  "labels": ["Type: Dependencies"],
+  "semanticCommitType": "build",
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "addLabels": ["Type: Security"]
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 10am on monday"]
+  },
+  "nix": {
+    "enabled": true
+  }
+}

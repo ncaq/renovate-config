@@ -1,7 +1,8 @@
 # renovate-config
 
-利用側のデフォルトプリセットは`default.json`で、
-実体の共有設定は`org-inherited-config.json`です。
+利用側のデフォルトプリセットは`default.json`です。
+`default.json`と`org-inherited-config.json`は、
+共通の`preset/base`と個別presetを直接`extends`しています。
 
 `packageRules`は個別プリセットに分割してあり、
 利用側では`ignorePresets`で無効化できます。
