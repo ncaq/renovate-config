@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "minimumReleaseAge": "1 day",
+  "packageRules": [
+    {
+      "description": [
+        "npmとpypi系統はサプライチェーン攻撃がされることが多く、セキュリティ通知はGitHubアラートでわかるので、長めに待機します"
+      ],
+      "matchManagers": [
+        "bun",
+        "npm",
+        "pep621",
+        "pep723",
+        "pip-compile",
+        "pip_requirements",
+        "pip_setup",
+        "pipenv",
+        "pixi",
+        "poetry",
+        "setup-cfg"
+      ],
+      "minimumReleaseAge": "7 days"
+    }
+  ]
+}
