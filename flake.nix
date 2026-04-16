@@ -85,7 +85,11 @@
                     '';
                   }
                 );
-                includes = [ "overlap-managers.json" ];
+                includes = [
+                  "overlap-managers.json"
+                  "preset/prefer-dependabot.json"
+                  "preset/prefer-renovate.json"
+                ];
               };
               zizmor.options = [ "--pedantic" ];
 
