@@ -61,7 +61,9 @@
                   }
                 );
                 includes = [
+                  "default.json"
                   "org-inherited-config.json"
+                  "preset/*.json"
                   "renovate.json"
                 ];
               };
