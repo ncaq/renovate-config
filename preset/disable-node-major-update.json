@@ -3,7 +3,7 @@
   "packageRules": [
     {
       "description": [
-        "Node.jsのバージョンは破壊的変更を避けたいので更新を無効化します"
+        "Node.jsのメジャーバージョンは破壊的変更を考えて手動で検討したいため、関連パッケージのメジャーアップデートを無効化"
       ],
       "enabled": false,
       "matchPackageNames": ["@types/node"],

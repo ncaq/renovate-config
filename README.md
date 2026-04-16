@@ -23,4 +23,4 @@
 - `github>ncaq/renovate-config//preset/disable-dependabot-overlap`
 - `github>ncaq/renovate-config//preset/set-dev-dependency-commit-scope`
 - `github>ncaq/renovate-config//preset/schedule-nix-flake-input-weekly`
-- `github>ncaq/renovate-config//preset/disable-types-node-major-update`
+- `github>ncaq/renovate-config//preset/disable-node-major-update`
