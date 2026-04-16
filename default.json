@@ -4,7 +4,7 @@
     "config:best-practices",
     "github>ncaq/renovate-config//preset/base",
     "github>ncaq/renovate-config//preset/deps-dev-dependency-commit-scope",
-    "github>ncaq/renovate-config//preset/disable-dependabot-overlap",
+    "github>ncaq/renovate-config//preset/prefer-renovate",
     "github>ncaq/renovate-config//preset/disable-node-major-update",
     "github>ncaq/renovate-config//preset/schedule-nix-flake-input-weekly"
   ]

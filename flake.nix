@@ -48,6 +48,45 @@
                 command = pkgs.editorconfig-checker;
                 includes = [ "*" ];
               };
+              generate-overlap-preset = {
+                command = pkgs.lib.getExe (
+                  pkgs.writeShellApplication {
+                    name = "generate-overlap-preset";
+                    runtimeInputs = with pkgs; [ jq ];
+                    text = ''
+                      jq -n --slurpfile managers overlap-managers.json '
+                        {
+                          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+                          packageRules: [
+                            {
+                              description: [
+                                "Dependabotとの重複を避けるため、対象managerではRenovateの更新を無効化します"
+                              ],
+                              enabled: false,
+                              matchManagers: $managers[0]
+                            }
+                          ]
+                        }
+                      ' > preset/prefer-dependabot.json
+                      jq -n --slurpfile managers overlap-managers.json '
+                        {
+                          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+                          packageRules: [
+                            {
+                              description: [
+                                "Dependabotとの重複回避のために無効化していた対象managerのRenovate更新を再度有効化します"
+                              ],
+                              enabled: true,
+                              matchManagers: $managers[0]
+                            }
+                          ]
+                        }
+                      ' > preset/prefer-renovate.json
+                    '';
+                  }
+                );
+                includes = [ "overlap-managers.json" ];
+              };
               zizmor.options = [ "--pedantic" ];
 
               renovate-config-validator = {
