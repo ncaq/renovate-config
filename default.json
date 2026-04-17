@@ -1,13 +1,17 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": [
+    "extendsの順序はpackageRulesの優先順位に影響します。後に記述されたルールが優先されるため、広範囲にenabledを設定するprefer-renovateを先に置き、個別の制限を後に置いてください。順序に依存しないプリセットは辞書順にソートしています。"
+  ],
+  "ignorePresets": [":semanticPrefixFixDepsChoreOthers"],
   "extends": [
     "config:best-practices",
+    "github>ncaq/renovate-config//preset/prefer-renovate",
     "github>ncaq/renovate-config//preset/base",
     "github>ncaq/renovate-config//preset/deps-dev-dependency-commit-scope",
     "github>ncaq/renovate-config//preset/disable-node-major-update",
     "github>ncaq/renovate-config//preset/lock-file-maintenance",
     "github>ncaq/renovate-config//preset/minimum-release-age",
-    "github>ncaq/renovate-config//preset/prefer-renovate",
     "github>ncaq/renovate-config//preset/schedule-nix-flake-input-weekly"
   ]
 }
