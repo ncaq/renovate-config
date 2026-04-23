@@ -1,0 +1,49 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": [
+        "Claude CodeプラグインマーケットプレイスのGitHubタグrefをJSON形式のファイルで自動更新します"
+      ],
+      "managerFilePatterns": ["/(^|/)settings\\.json$/"],
+      "matchStrings": [
+        "\"repo\":\\s*\"(?<depName>[^\"]+)\"[^{}]*?\"ref\":\\s*\"(?<currentValue>[^@\"][^\"]*)\""
+      ],
+      "datasourceTemplate": "github-tags"
+    },
+    {
+      "customType": "regex",
+      "description": [
+        "Claude CodeプラグインマーケットプレイスのnpmパッケージrefをJSON形式のファイルで自動更新します"
+      ],
+      "managerFilePatterns": ["/(^|/)settings\\.json$/"],
+      "matchStrings": [
+        "\"ref\":\\s*\"(?<depName>@[^@\"]+)@(?<currentValue>[^\"]+)\""
+      ],
+      "datasourceTemplate": "npm"
+    },
+    {
+      "customType": "regex",
+      "description": [
+        "Claude CodeプラグインマーケットプレイスのGitHubタグrefをNix形式のファイルで自動更新します"
+      ],
+      "managerFilePatterns": ["/\\.nix$/"],
+      "matchStrings": [
+        "source\\s*=\\s*\"github\";[^}]*?repo\\s*=\\s*\"(?<depName>[^\"]+)\";[^}]*?ref\\s*=\\s*\"(?<currentValue>[^@\"][^\"]*)\";"
+      ],
+      "datasourceTemplate": "github-tags"
+    },
+    {
+      "customType": "regex",
+      "description": [
+        "Claude CodeプラグインマーケットプレイスのnpmパッケージrefをNix形式のファイルで自動更新します"
+      ],
+      "managerFilePatterns": ["/\\.nix$/"],
+      "matchStrings": [
+        "ref\\s*=\\s*\"(?<depName>@[^@\"]+)@(?<currentValue>[^\"]+)\";"
+      ],
+      "datasourceTemplate": "npm"
+    }
+  ]
+}
