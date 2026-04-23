@@ -8,7 +8,7 @@
       ],
       "fileMatch": ["(^|/)settings\\.json$"],
       "matchStrings": [
-        "\"repo\":\\s*\"(?<depName>[^\"]+)\",\\s*\"ref\":\\s*\"(?<currentValue>(?!@)[^\"]+)\""
+        "\"repo\":\\s*\"(?<depName>[^\"]+)\"[^{}]*?\"ref\":\\s*\"(?<currentValue>(?!@)[^\"]+)\""
       ],
       "datasourceTemplate": "github-tags"
     },
@@ -30,7 +30,7 @@
       ],
       "fileMatch": ["\\.nix$"],
       "matchStrings": [
-        "source\\s*=\\s*\"github\";\\s*repo\\s*=\\s*\"(?<depName>[^\"]+)\";\\s*ref\\s*=\\s*\"(?<currentValue>(?!@)[^\"]+)\";"
+        "source\\s*=\\s*\"github\";[^}]*?repo\\s*=\\s*\"(?<depName>[^\"]+)\";[^}]*?ref\\s*=\\s*\"(?<currentValue>(?!@)[^\"]+)\";"
       ],
       "datasourceTemplate": "github-tags"
     },
