@@ -6,7 +6,7 @@
       "description": [
         "Claude CodeプラグインマーケットプレイスのGitHubタグrefをJSON形式のファイルで自動更新します"
       ],
-      "fileMatch": ["(^|/)settings\\.json$"],
+      "managerFilePatterns": ["/(^|/)settings\\.json$/"],
       "matchStrings": [
         "\"repo\":\\s*\"(?<depName>[^\"]+)\"[^{}]*?\"ref\":\\s*\"(?<currentValue>[^@\"][^\"]*)\""
       ],
@@ -17,7 +17,7 @@
       "description": [
         "Claude CodeプラグインマーケットプレイスのnpmパッケージrefをJSON形式のファイルで自動更新します"
       ],
-      "fileMatch": ["(^|/)settings\\.json$"],
+      "managerFilePatterns": ["/(^|/)settings\\.json$/"],
       "matchStrings": [
         "\"ref\":\\s*\"(?<depName>@[^@\"]+)@(?<currentValue>[^\"]+)\""
       ],
@@ -28,7 +28,7 @@
       "description": [
         "Claude CodeプラグインマーケットプレイスのGitHubタグrefをNix形式のファイルで自動更新します"
       ],
-      "fileMatch": ["\\.nix$"],
+      "managerFilePatterns": ["/\\.nix$/"],
       "matchStrings": [
         "source\\s*=\\s*\"github\";[^}]*?repo\\s*=\\s*\"(?<depName>[^\"]+)\";[^}]*?ref\\s*=\\s*\"(?<currentValue>[^@\"][^\"]*)\";"
       ],
@@ -39,7 +39,7 @@
       "description": [
         "Claude CodeプラグインマーケットプレイスのnpmパッケージrefをNix形式のファイルで自動更新します"
       ],
-      "fileMatch": ["\\.nix$"],
+      "managerFilePatterns": ["/\\.nix$/"],
       "matchStrings": [
         "ref\\s*=\\s*\"(?<depName>@[^@\"]+)@(?<currentValue>[^\"]+)\";"
       ],
