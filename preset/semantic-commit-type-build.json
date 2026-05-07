@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "semanticCommitType": "build",
+  "packageRules": [
+    {
+      "description": [
+        "`config:best-practices`経由で読み込まれる`:semanticPrefixFixDepsChoreOthers`などの`packageRules`がroot設定の`semanticCommitType`を上書きしてしまうため、後勝ちする`packageRules`で再度buildに統一します"
+      ],
+      "matchPackageNames": ["*"],
+      "semanticCommitType": "build"
+    }
+  ]
+}
