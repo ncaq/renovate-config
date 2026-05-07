@@ -3,7 +3,6 @@
   "timezone": "Asia/Tokyo",
   "branchConcurrentLimit": 20,
   "labels": ["Type: Dependencies"],
-  "semanticCommitType": "build",
   "vulnerabilityAlerts": {
     "enabled": true,
     "addLabels": ["Type: Security"]
