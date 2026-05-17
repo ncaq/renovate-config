@@ -10,7 +10,8 @@
       "matchStrings": [
         "\"repo\":\\s*\"(?<depName>[^\"]+)\"[^{}]*?\"ref\":\\s*\"(?<currentValue>[^\"]+)\""
       ],
-      "datasourceTemplate": "github-tags"
+      "datasourceTemplate": "github-tags",
+      "depTypeTemplate": "claude-code-marketplace"
     },
     {
       "customType": "regex",
@@ -21,7 +22,8 @@
       "matchStrings": [
         "source\\s*=\\s*\"github\";[^}]*?repo\\s*=\\s*\"(?<depName>[^\"]+)\";[^}]*?ref\\s*=\\s*\"(?<currentValue>[^\"]+)\";"
       ],
-      "datasourceTemplate": "github-tags"
+      "datasourceTemplate": "github-tags",
+      "depTypeTemplate": "claude-code-marketplace"
     }
   ]
 }
