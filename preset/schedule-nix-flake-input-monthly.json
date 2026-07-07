@@ -1,0 +1,10 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": ["Nix Flakeの入力更新を月1回に制限します"],
+      "matchManagers": ["nix"],
+      "schedule": ["before 10am on the first day of the month"]
+    }
+  ]
+}

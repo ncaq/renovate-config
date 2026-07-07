@@ -12,7 +12,7 @@
     "github>ncaq/renovate-config//preset/deps-dev-dependency-commit-scope",
     "github>ncaq/renovate-config//preset/disable-node-major-update",
     "github>ncaq/renovate-config//preset/minimum-release-age",
-    "github>ncaq/renovate-config//preset/schedule-nix-flake-input-weekly",
+    "github>ncaq/renovate-config//preset/schedule-nix-flake-input-monthly",
     "github>ncaq/renovate-config//preset/semantic-commit-type-build"
   ]
 }
