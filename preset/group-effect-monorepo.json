@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": [
+        "Effectはeffect本体と@effect/*スコープのパッケージがバージョン連動するモノレポです。しかしRenovate本体のmonorepo:effect定義はEffect-TS/effect-smolだけを指しているため、本家Effect-TS/effect由来のパッケージはグループ化されません。sourceUrlでマッチさせて1つのグループとして更新します。"
+      ],
+      "groupName": "effect monorepo",
+      "matchSourceUrls": ["https://github.com/Effect-TS/effect"]
+    }
+  ]
+}
