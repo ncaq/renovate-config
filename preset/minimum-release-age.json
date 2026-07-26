@@ -19,7 +19,7 @@
         "poetry",
         "setup-cfg"
       ],
-      "minimumReleaseAge": "7 days"
+      "minimumReleaseAge": "3 days"
     }
   ]
 }
