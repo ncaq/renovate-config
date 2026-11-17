@@ -1,25 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "minimumReleaseAge": "1 day",
-  "packageRules": [
-    {
-      "description": [
-        "npmとpypi系統はサプライチェーン攻撃がされることが多く、セキュリティ通知はGitHubアラートでわかるので、長めに待機します"
-      ],
-      "matchManagers": [
-        "bun",
-        "npm",
-        "pep621",
-        "pep723",
-        "pip-compile",
-        "pip_requirements",
-        "pip_setup",
-        "pipenv",
-        "pixi",
-        "poetry",
-        "setup-cfg"
-      ],
-      "minimumReleaseAge": "3 days"
-    }
-  ]
+  "description": [
+    "リリースから更新までの待機期間を設定します。",
+    "npmとPyPIのパッケージは3日待機します。サプライチェーン攻撃が多く、セキュリティ問題はGitHubアラートで通知されるためです。npmは`config:best-practices`が既に3日待機にしているので、ここではPyPI用の公式プリセットだけを追加します。",
+    "それ以外のパッケージは1日待機します。"
+  ],
+  "extends": ["security:minimumReleaseAgePypi"],
+  "minimumReleaseAge": "1 day"
 }
